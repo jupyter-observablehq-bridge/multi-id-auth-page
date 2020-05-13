@@ -10,11 +10,10 @@ It allows a user to authenticate with a number of ID providers:
 
 - [Google single signin](https://developers.google.com/identity/sign-in/web/sign-in)
 - SG Connect (corporate example)
-- a demo ID provider that provides random credentials without redirect/login.
 
 To add/remove other ID providers simply clone the repo and publish your own JOBA.
 
-Most main stream ID providers offer off-the-shelf JavaScript libraries that encapsulate the complexity of the OAuth 2.0 mechanism (redirection, refresh, etc), are typically imported via top level `<script>` tags, and ultimately are very simple to use.
+Most main stream ID providers offer off-the-shelf JavaScript libraries that encapsulate the complexity of the OAuth 2.0 mechanism (redirection, refresh, etc), are typically imported via top level `<script>` tags, and then simple to use.
 
 Consequently a JOBA can be a simple aggregate of several ID providers user friendly authentication libraries.  
 To make that even simpler the demo JOBA is written in [Vue](https://vuejs.org/) for structure but does **not** require a build step.  
