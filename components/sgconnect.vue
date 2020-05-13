@@ -41,7 +41,7 @@ module.exports = {
   data() {
     return {
       provider: "sgconnect",
-      client_id: "9bb51c1a-6287-4c46-8451-3fe8e64eea03",
+      client_id: "a17bb668-bd3e-4fc1-9006-19f69e6484f6",
       scope: "openid profile email",
       creds: null,
       timer: null,
