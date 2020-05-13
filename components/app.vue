@@ -96,6 +96,12 @@ module.exports = {
       console.log("-- sendCreds");
       console.log(this.creds);
       this.lastMsgTime = new Date().toLocaleTimeString("fr-FR");
+      if (!window.opener){
+          console.log('******** WARNING')
+          console.log('THIS PAGE MUST BE OPENED FROM ANOTHER ONE')
+          console.log('SEE DOCUMENTATION http://TBD')
+          return
+      }
       window.opener.postMessage({ updateCreds: this.creds }, "*");
     },
 
