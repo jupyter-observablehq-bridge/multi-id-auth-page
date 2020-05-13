@@ -1,4 +1,4 @@
-# Jupyter-ObservableHQ Bridge Auth page
+# JOB Multi ID Provider Auth Page
 
 See [documentation](TBD).
 
@@ -29,8 +29,22 @@ python -m http.server 3000
 python -m http.server 3001
 ```
 
-- Open [http://localhost:3001/opener](http://localhost:8090/opener)
+- Open [http://localhost:3001/opener.html](http://localhost:8090/opener.html)
 - Click button "Open Auth Page..." and browser console
 - This will open page http://localhost:3000
 - Login to Google and/or SG Connect
-- see localhost:8090/opener console
+- See localhost:8090/opener.html console
+
+## Deploy
+
+- Install [push-dir](https://www.npmjs.com/package/push-dir)
+
+```bash
+yarn add push-dir
+```
+
+- push `master` branch to `gh-pages`.
+
+```bash
+push-dir --dir=. --branch=gh-pages
+```
