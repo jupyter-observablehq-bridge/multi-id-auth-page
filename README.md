@@ -4,7 +4,7 @@ See [documentation](TBD).
 
 ## Definition
 
-A demo instance of a **JOB Auth** web page (JOBA) is available at [https://TBD](TBD).
+A demo instance of a **JOB Auth** web page (JOBA) is available at https://jupyter-observablehq-bridge.github.io/multi-id-auth-page.
 
 It allows a user to authenticate with a number of ID providers:
 
