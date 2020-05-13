@@ -1,0 +1,55 @@
+<html>
+  <style>
+    .wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .my-btn {
+      width: 300px;
+      height: 50px;
+      font-size: 16px;
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+  </style>
+  <body>
+    <script>
+      //   const HOST_AUTH_PAGE = "http://satellite.sgmarkets.com:3000";
+      const HOST_AUTH_PAGE = "http://localhost:3000";
+
+      let win;
+      const url = window.location.href;
+
+      const onMsg = (evt) => {
+        console.log("RAW ------ ", evt);
+
+        if (evt.origin === HOST_AUTH_PAGE) {
+          console.log("msg from AUTH_PAGE");
+          console.log(evt);
+
+          if (evt.data === "url") {
+            console.log("request from AUTH_PAGE for url opener =", url);
+            win.postMessage({ url }, "*");
+          }
+
+          if (evt.data.updateCreds) {
+            console.log("DATA ------ update creds");
+            console.log(evt.data.updateCreds);
+            window.creds = evt.data.updateCreds;
+          }
+        }
+      };
+      addEventListener("message", onMsg);
+
+      const onClick = () => {
+        win = window.open(HOST_AUTH_PAGE, "child");
+      };
+    </script>
+    <div class="wrapper">
+      <button class="my-btn" onclick="onClick()">
+        Open Auth page - and browser console
+      </button>
+    </div>
+  </body>
+</html>
