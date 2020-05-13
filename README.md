@@ -28,11 +28,11 @@ python -m http.server 3000
 python -m http.server 3001
 ```
 
-- Open [http://localhost:3001/opener.html](http://localhost:8090/opener.html)
+- Open http://localhost:3001/opener.html
 - Click button "Open Auth Page..." and browser console
 - This will open page http://localhost:3000
 - Login to Google and/or SG Connect
-- See localhost:8090/opener.html console
+- See http://localhost:3001/opener.html console
 
 ## Deploy
 
