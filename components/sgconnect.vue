@@ -42,7 +42,7 @@ module.exports = {
     return {
       provider: "sgconnect",
       client_id: "a17bb668-bd3e-4fc1-9006-19f69e6484f6",
-      scope: "openid profile email",
+      scope: "openid profile mail",
       creds: null,
       timer: null,
       expires_at: null,
@@ -116,7 +116,7 @@ module.exports = {
 
     checkScope() {
       const scopesIn = this.scope.split(" ").map(e => e.trim());
-      const scopesOut = this.creds.scope.split(" ").map(e => e.trim());
+      const scopesOut = this.creds.scope;
       let ok = true;
       for (const e of scopesIn) if (!scopesOut.includes(e)) ok = false;
       this.scopeOk = ok;
@@ -128,6 +128,11 @@ module.exports = {
         this.status = "error";
         return null;
       }
+      this.creds = {
+        access_token: token,
+        token_info: "requesting...",
+        user_info: "requesting..."
+      };
       await this.updateTokenInfo(token);
       await this.updateUserInfo(token);
 
