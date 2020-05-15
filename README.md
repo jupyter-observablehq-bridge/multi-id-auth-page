@@ -39,11 +39,11 @@ python -m http.server 3001
 - Install [push-dir](https://www.npmjs.com/package/push-dir)
 
 ```bash
-yarn add push-dir
+yarn install
 ```
 
 - push `master` branch to `gh-pages`.
 
 ```bash
-push-dir --dir=. --branch=gh-pages
+yarn deploy
 ```
