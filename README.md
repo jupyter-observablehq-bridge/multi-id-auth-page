@@ -1,6 +1,6 @@
 # JOB Multi ID Provider Auth Page
 
-See [documentation](TBD).
+See [documentation](https://observablehq.com/@oscar6echo/jupyter-observablehq-bridge).
 
 ## Definition
 

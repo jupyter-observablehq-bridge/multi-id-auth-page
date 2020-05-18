@@ -4,7 +4,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-title>Multi ID Provider Auth Page</v-toolbar-title>
       <v-spacer></v-spacer>
-      <a href="https://github.com/oscar6echo/TBD" target="_blank">
+      <a href="https://github.com/jupyter-observablehq-bridge/multi-id-auth-page" target="_blank">
         <v-icon>mdi-github-circle</v-icon>
       </a>
     </v-app-bar>
@@ -99,7 +99,7 @@ module.exports = {
       if (!window.opener){
           console.log('******** WARNING');
           console.log('THIS PAGE MUST BE OPENED FROM ANOTHER ONE');
-          console.log('SEE DOCUMENTATION http://TBD');
+          console.log('SEE DOCUMENTATION https://observablehq.com/@oscar6echo/jupyter-observablehq-bridge');
           return
       }
       window.opener.postMessage({ updateCreds: this.creds }, "*");
