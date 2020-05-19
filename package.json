@@ -1,0 +1,9 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "deploy": "push-dir --dir=. --branch=gh-pages"
+  },
+  "dependencies": {
+    "push-dir": "^0.4.1"
+  }
+}
