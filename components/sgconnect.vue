@@ -72,7 +72,9 @@ module.exports = {
     setupAuth() {
       this.sgwtConnect = window.setupSGWTConnect({
         authorization_endpoint: "https://sso.sgmarkets.com/sgconnect",
-        redirect_uri: window.location.origin,
+        redirect_uri: window.location.href.includes("localhost")
+          ? window.location.origin
+          : window.location.href,
         client_id: this.client_id,
         scope: this.scope
       });
